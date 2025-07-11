@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lugmex</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="/media/logo-sm.png">
+    <script src="https://unpkg.com/i18next@23.4.5/dist/umd/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("00R0gZevNmmVychsi"); // Replace with your EmailJS public key
+        })();
+    </script>
+    <script defer src="localization.js"></script>
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <img class="logo_big" src="/media/logo.png" alt="" />
+    <img class="logo_sm" src="/media/logo-sm.png" alt=""/>
+    <nav>
+      <a href="#contactus" data-i18n="description">Contacts</a>
+      <a href="#aboutus" data-i18n="aboutustitle">About us</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-selected" id="currentLang" data-i18n="language.english">English</button>
+        <div class="lang-options" id="langOptions">
+          <div class="lang-option" data-lang="en"><img src="/media/united-kingdom.png" />English</div>
+          <div class="lang-option" data-lang="pl"><img src="/media/poland.png" />Pólska</div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main_part" style="background-image: url('/media/slider/1.JPG');">
+    <div class="main-text">
+      <div data-i18n="main.brand">LUGMEX</div>
+      <div data-i18n="main.subtitle">Construction company</div>
+      <div data-i18n="main.tagline">Experienced construction contractor</div>
+      <div>
+        <a href="#contactus" data-i18n="main.contact_link">Contacts</a>
+      </div>
+    </div>
+    <div>
+      <img class="main_logo" src="/media/logo-sm.png" alt=""/>
+    </div>
+  </main>
+
+  <section id="aboutus" class="aboutus_section">
+    <div><h2 data-i18n="aboutus.private_orders">Private Orders</h2>
+      <p data-i18n="aboutus.private_orders_desc">Regardless of the specific nature of the project, we adapt to the client's needs and guarantee process
+      stability. We renovate residential and commercial premises, offices, shops, as well as industrial and specialized
+      facilities. We approach each client individually – taking into account the specifics of the project, technical
+      requirements, and client wishes to ensure results that truly work.</p>
+
+      <h2 data-i18n="aboutus.b2b">B2B</h2>
+      <p data-i18n="aboutus.b2b_desc">We offer comprehensive construction solutions for companies that value transparency, accountability, and
+      coordinated work on site. We participate in projects of various scales, ensuring effective collaboration with
+      technical teams and meeting agreed deadlines. We collaborate with companies on a subcontracting basis, offering a
+      transparent cooperation model and flexible approach. The foundation of our work is high-quality project execution
+      and partner support at every stage of implementation. We are open to new challenges and reliable partnerships. We
+      strive for long-term cooperation and build relationships based on trust, professionalism, and shared
+      responsibility for the outcome.</p>
+    </div>
+  </section>
+
+  <section id="whyus">
+    <h2 data-i18n="whyus.title">Why choose our construction company?</h2>
+    <div>
+      <img src="/media/whyus.webp" alt="">
+      <div class="whyus_itemwrapper">
+        <div class="whyus_item">
+          <img src="/media/star.svg" alt="">
+          <div>
+            <div data-i18n="whyus.toprated.title">TOP RATED</div>
+            <div data-i18n="whyus.toprated.desc">We meet our clients' expectations and requirements.</div>
+          </div>
+        </div>
+        <div class="whyus_item">
+          <img src="/media/heart.svg" alt="">
+          <div>
+            <div data-i18n="whyus.quality.title">HIGH QUALITY</div>
+            <div data-i18n="whyus.quality.desc">Maintaining high quality standards throughout the entire investment process.</div>
+          </div>
+        </div>
+        <div class="whyus_item">
+          <img src="/media/calendar.svg" alt="">
+          <div>
+            <div data-i18n="whyus.leadtime.title">SHORT LEAD TIME</div>
+            <div data-i18n="whyus.leadtime.desc">Contract execution within the agreed deadline.</div>
+          </div>
+        </div>
+        <div class="whyus_item">
+          <img src="/media/hat.svg" alt="">
+          <div>
+            <div data-i18n="whyus.staff.title">QUALIFIED STAFF</div>
+            <div data-i18n="whyus.staff.desc">Employment of qualified and competent staff and continuous improvement of their qualifications.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contactus">
+    <div class="contact-container">
+      <p class="contact-intro" data-i18n="contact.intro">
+        Contact us via the contact form, email, or phone. We are always ready to help you.
+      </p>
+
+      <div class="contact-content">
+        <form class="contact-form" id="contactForm">
+          <input type="text" name="from_name" placeholder="Name" required data-i18n-placeholder="contact.name" />
+          <input type="email" name="from_email" placeholder="E-mail" required data-i18n-placeholder="contact.email" />
+          <input type="tel" name="phone" placeholder="Phone +48..." required data-i18n-placeholder="contact.phone" />
+          <textarea name="message" placeholder="Message" required data-i18n-placeholder="contact.message"></textarea>
+          <button type="submit" id="submit_btn" data-i18n="contact.send">Send</button>
+        </form>
+
+        <div class="contact-info">
+          <div class="info-block">
+            <i class="fa-regular fa-clock"></i>
+            <div>
+              <strong data-i18n="contact.hours.title">Business Hours</strong><br />
+              <span data-i18n="contact.hours.value">Monday-Friday from 9:00 to 18:00</span>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong data-i18n="contact.address.title">Address</strong><br />
+              <span data-i18n="contact.address.value">Wittenberger Weg 188 40593 Düsseldorf</span>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <strong data-i18n="contact.phone.title">Phone:</strong><br />
+              <span data-i18n="contact.phone.value">+48 21171007338</span>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <i class="fa-regular fa-envelope"></i>
+            <div>
+              <strong data-i18n="contact.email.title">E-Mail:</strong><br />
+              <span data-i18n="contact.email.value">info@bbau-gmbh.de</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-left">
+        <img src="/media/logo-black.png" alt="BBau GmbH Logo" class="footer-logo" />
+        <div class="footer-contact">
+          <p><strong data-i18n="footer.address.label">Address:</strong> <span data-i18n="footer.address.value">Wittenberger Weg 188<br>40593 Düsseldorf</span></p>
+          <p><strong data-i18n="footer.phone.label">Phone:</strong> <span data-i18n="footer.phone.value">+49 21171007338</span></p>
+          <p><strong data-i18n="footer.email.label">Email:</strong> <span data-i18n="footer.email.value">info@bbau-gmbh.de</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy" data-i18n="footer.copyright">
+        © 2025 LUGMEX. A trademark of LUGINVEST.
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
