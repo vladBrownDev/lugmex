@@ -93,7 +93,7 @@ function preloadImages() {
       }
     };
 
-    img.src = `/media/slider/${i}.JPG`;
+    img.src = `./media/slider/${i}.JPG`;
   }
 }
 

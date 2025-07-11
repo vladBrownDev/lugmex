@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lugmex</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="/media/logo-sm.png">
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./media/logo-sm.png">
     <script src="https://unpkg.com/i18next@23.4.5/dist/umd/i18next.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
@@ -14,28 +14,28 @@
             emailjs.init("00R0gZevNmmVychsi"); // Replace with your EmailJS public key
         })();
     </script>
-    <script defer src="localization.js"></script>
-    <script defer src="script.js"></script>
+    <script defer src="./localization.js"></script>
+    <script defer src="./script.js"></script>
 </head>
 
 <body>
   <header>
-    <img class="logo_big" src="/media/logo.png" alt="" />
-    <img class="logo_sm" src="/media/logo-sm.png" alt=""/>
+    <img class="logo_big" src="./media/logo.png" alt="" />
+    <img class="logo_sm" src="./media/logo-sm.png" alt=""/>
     <nav>
       <a href="#contactus" data-i18n="description">Contacts</a>
       <a href="#aboutus" data-i18n="aboutustitle">About us</a>
       <div class="lang-switch" id="langSwitch">
         <button class="lang-selected" id="currentLang" data-i18n="language.english">English</button>
         <div class="lang-options" id="langOptions">
-          <div class="lang-option" data-lang="en"><img src="/media/united-kingdom.png" />English</div>
-          <div class="lang-option" data-lang="pl"><img src="/media/poland.png" />Pólska</div>
+          <div class="lang-option" data-lang="en"><img src="./media/united-kingdom.png" />English</div>
+          <div class="lang-option" data-lang="pl"><img src="./media/poland.png" />Pólska</div>
         </div>
       </div>
     </nav>
   </header>
 
-  <main id="main_part" style="background-image: url('/media/slider/1.JPG');">
+  <main id="main_part" style="background-image: url('./media/slider/1.JPG');">
     <div class="main-text">
       <div data-i18n="main.brand">LUGMEX</div>
       <div data-i18n="main.subtitle">Construction company</div>
@@ -45,7 +45,7 @@
       </div>
     </div>
     <div>
-      <img class="main_logo" src="/media/logo-sm.png" alt=""/>
+      <img class="main_logo" src="./media/logo-sm.png" alt=""/>
     </div>
   </main>
 
@@ -70,31 +70,31 @@
   <section id="whyus">
     <h2 data-i18n="whyus.title">Why choose our construction company?</h2>
     <div>
-      <img src="/media/whyus.webp" alt="">
+      <img src="./media/whyus.webp" alt="">
       <div class="whyus_itemwrapper">
         <div class="whyus_item">
-          <img src="/media/star.svg" alt="">
+          <img src="./media/star.svg" alt="">
           <div>
             <div data-i18n="whyus.toprated.title">TOP RATED</div>
             <div data-i18n="whyus.toprated.desc">We meet our clients' expectations and requirements.</div>
           </div>
         </div>
         <div class="whyus_item">
-          <img src="/media/heart.svg" alt="">
+          <img src="./media/heart.svg" alt="">
           <div>
             <div data-i18n="whyus.quality.title">HIGH QUALITY</div>
             <div data-i18n="whyus.quality.desc">Maintaining high quality standards throughout the entire investment process.</div>
           </div>
         </div>
         <div class="whyus_item">
-          <img src="/media/calendar.svg" alt="">
+          <img src="./media/calendar.svg" alt="">
           <div>
             <div data-i18n="whyus.leadtime.title">SHORT LEAD TIME</div>
             <div data-i18n="whyus.leadtime.desc">Contract execution within the agreed deadline.</div>
           </div>
         </div>
         <div class="whyus_item">
-          <img src="/media/hat.svg" alt="">
+          <img src="./media/hat.svg" alt="">
           <div>
             <div data-i18n="whyus.staff.title">QUALIFIED STAFF</div>
             <div data-i18n="whyus.staff.desc">Employment of qualified and competent staff and continuous improvement of their qualifications.</div>
@@ -159,7 +159,7 @@
   <footer class="site-footer">
     <div class="footer-top">
       <div class="footer-left">
-        <img src="/media/logo-black.png" alt="BBau GmbH Logo" class="footer-logo" />
+        <img src="./media/logo-black.png" alt="BBau GmbH Logo" class="footer-logo" />
         <div class="footer-contact">
           <p><strong data-i18n="footer.address.label">Address:</strong> <span data-i18n="footer.address.value">Wittenberger Weg 188<br>40593 Düsseldorf</span></p>
           <p><strong data-i18n="footer.phone.label">Phone:</strong> <span data-i18n="footer.phone.value">+49 21171007338</span></p>

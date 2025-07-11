@@ -161,7 +161,7 @@ main {
 
 .aboutus_section {
     padding: 60px 0;
-    background: url('/media/desc.webp');
+    background: url('./media/desc.webp');
     background-position: center left;
     background-repeat: no-repeat;
     background-size: cover;
@@ -248,7 +248,7 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('/media/slider/6.JPG');
+    background-image: url('./media/slider/6.JPG');
 
     .contact-container {
         max-width: 1100px;
