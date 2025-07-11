@@ -1,4 +1,4 @@
-
+const href = window.location.origin + window.location.pathname
 // Init i18next
 i18next.init({
   lng: 'en',
@@ -17,11 +17,11 @@ function updateContent() {
   const langDetails = {
     en: {
       label: 'English',
-      flag: '/media/united-kingdom.png'
+      flag: href + 'media/united-kingdom.png'
     },
     pl: {
       label: 'Pólska',
-      flag: '/media/poland.png'
+      flag: href + 'media/poland.png'
     }
   };
 
@@ -93,7 +93,7 @@ function preloadImages() {
       }
     };
 
-    img.src = `./media/slider/${i}.JPG`;
+    img.src = href + `media/slider/${i}.JPG`;
   }
 }
 
