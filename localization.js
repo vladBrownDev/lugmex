@@ -64,7 +64,7 @@ window.resources = {
         },
         phone: {
           title: "Phone:",
-          value: "+48 797207007",
+          value: "+48 797 207 007",
         },
         email: {
           title: "E-Mail:",
@@ -78,7 +78,7 @@ window.resources = {
         },
         phone: {
           label: "Phone:",
-          value: "+48 797207007",
+          value: "+48 797 207 007",
         },
         email: {
           label: "Email:",
@@ -151,7 +151,7 @@ Dążymy do długoterminowej współpracy i budujemy relacje oparte na zaufaniu,
         },
         phone: {
           title: "Telefon:",
-          value: "+48 797207007",
+          value: "+48 797 207 007",
         },
         email: {
           title: "E-Mail:",
@@ -165,7 +165,7 @@ Dążymy do długoterminowej współpracy i budujemy relacje oparte na zaufaniu,
         },
         phone: {
           label: "Telefon:",
-          value: "+48 797207007",
+          value: "+48 797 207 007",
         },
         email: {
           label: "Email:",

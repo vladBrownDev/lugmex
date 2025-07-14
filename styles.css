@@ -316,6 +316,7 @@ main .main-text div:has(a) {
 
 .footer-logo {
   max-height: 80px;
+  max-width: 80%;
 }
 
 .footer-contact p {

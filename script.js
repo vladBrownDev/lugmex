@@ -1,7 +1,7 @@
 const href = window.location.origin + window.location.pathname
 // Init i18next
 i18next.init({
-  lng: 'en',
+  lng: 'pl',
   debug: false,
   resources
 }, () => updateContent());
