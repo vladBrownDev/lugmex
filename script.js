@@ -67,47 +67,45 @@ let currentSlide = 0;
 const totalSlides = 11;
 const base64Images = [];
 
-// Load images as base64
-function preloadImages() {
-  let loaded = 0;
+const images = [
+  href + '/media/slider/1.JPG',
+  href + '/media/slider/2.JPG',
+  href + '/media/slider/3.JPG',
+  href + '/media/slider/4.JPG',
+  href + '/media/slider/5.JPG',
+  href + '/media/slider/6.JPG',
+  href + '/media/slider/7.JPG',
+  href + '/media/slider/8.JPG',
+  href + '/media/slider/9.JPG',
+  href + '/media/slider/10.JPG',
+  href + '/media/slider/11.JPG'
+]
 
-  for (let i = 1; i <= totalSlides; i++) {
-    const img = new Image();
-    img.crossOrigin = 'anonymous'; // Important if hosted on a server with CORS
+function isSafariOnMac() {
+  const ua = navigator.userAgent;
+  const isSafari = /^((?!chrome|android).)*safari/i.test(ua);
+  const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+  return isSafari && isMac;
+}
 
-    img.onload = () => {
-      // Convert to base64 via canvas
-      const canvas = document.createElement('canvas');
-      canvas.width = img.width;
-      canvas.height = img.height;
+const main = document.querySelector('#main_part');
+main.style.backgroundImage = `url(${images[0]})`
+document.querySelector('.hidden').src = images[1]
+let i = 1
+setInterval(() => {
+  main.style.backgroundImage = `url(${images[i++]})`
 
-      const ctx = canvas.getContext('2d');
-      ctx.drawImage(img, 0, 0);
-
-      const dataURL = canvas.toDataURL('image/jpeg'); // or 'image/png' if needed
-      base64Images[i - 1] = dataURL;
-
-      loaded++;
-      if (loaded === totalSlides) {
-        startSlideshow();
-      }
-    };
-
-    img.src = href + `media/slider/${i}.JPG`;
+  if (i === images.length) i = 0
+  else {
+    // preload the next image, so that it transitions smoothly
+    document.querySelector('.hidden').src = images[i]
   }
+}, 4500)
+
+if(isSafariOnMac()) {
+  main.style.backgroundColor = 'rgb(69, 64, 64)';
+  main.style.transition = 'none';
 }
-
-function startSlideshow() {
-  // Show the first image
-  mainElement.style.backgroundImage = `url(${base64Images[currentSlide]})`;
-
-  setInterval(() => {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    mainElement.style.backgroundImage = `url(${base64Images[currentSlide]})`;
-  }, 4500);
-}
-
-preloadImages();
 
 const contactForm = document.getElementById('contactForm');
 

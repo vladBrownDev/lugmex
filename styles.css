@@ -8,6 +8,10 @@ a {
   text-decoration: none;
 }
 
+.hidden {
+  display: none;
+}
+
 body {
   color: #333;
   margin: 0;
@@ -21,7 +25,8 @@ header {
 }
 header .logo_big {
   width: 200px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 header .logo_sm {
   display: none;
@@ -55,7 +60,6 @@ header .lang-options {
 header .lang-option {
   padding: 8px 14px;
   cursor: pointer;
-  transition: background 0.2s;
   font-size: 16px;
   display: flex;
   align-items: center;
@@ -74,7 +78,8 @@ header nav {
   height: 100%;
   display: flex;
   align-items: center;
-  column-gap: 24px;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
 }
 header nav a {
   text-decoration: none;
@@ -97,7 +102,8 @@ main {
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
   transition: background-image 0.7s;
 }
 main .main-text {
@@ -178,7 +184,8 @@ main .main-text div:has(a) {
 }
 #whyus > div > img {
   width: 550px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #whyus .whyus_itemwrapper {
   width: 570px;
@@ -397,7 +404,8 @@ main .main-text div:has(a) {
   header .logo_sm {
     display: flex;
     width: 44px;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .footer-left {
     flex-direction: column-reverse;
