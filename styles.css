@@ -97,14 +97,26 @@ header nav a:hover {
 
 main {
   height: 680px;
-  background-size: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-repeat: no-repeat;
   -moz-column-gap: 40px;
        column-gap: 40px;
-  transition: background-image 0.7s;
+  background-color: #454040;
+  position: relative;
+}
+main * {
+  z-index: 1;
+}
+main #main_background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: background-image 0.7s, opacity 0.35s;
 }
 main .main-text {
   display: flex;
@@ -425,6 +437,10 @@ main .main-text div:has(a) {
   }
   main .main_logo {
     margin-top: 20px;
+  }
+  main #main_background {
+    left: -24px;
+    width: calc(100% + 24px);
   }
   #whyus > div {
     flex-direction: column;

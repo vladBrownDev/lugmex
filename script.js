@@ -81,31 +81,49 @@ const images = [
   href + '/media/slider/11.JPG'
 ]
 
-function isSafariOnMac() {
+function isSafari() {
   const ua = navigator.userAgent;
   const isSafari = /^((?!chrome|android).)*safari/i.test(ua);
-  const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-  return isSafari && isMac;
+  return isSafari;
 }
 
-const main = document.querySelector('#main_part');
+const main = document.querySelector('#main_background');
 main.style.backgroundImage = `url(${images[0]})`
 document.querySelector('.hidden').src = images[1]
 let i = 1
-setInterval(() => {
-  main.style.backgroundImage = `url(${images[i++]})`
-
-  if (i === images.length) i = 0
-  else {
-    // preload the next image, so that it transitions smoothly
-    document.querySelector('.hidden').src = images[i]
-  }
-}, 4500)
-
-if(isSafariOnMac()) {
-  main.style.backgroundColor = 'rgb(69, 64, 64)';
-  main.style.transition = 'none';
+if(!isSafari()) {
+  setInterval(() => {
+    main.style.backgroundImage = `url(${images[i++]})`
+  
+    if (i === images.length) i = 0
+    else {
+      // preload the next image, so that it transitions smoothly
+      document.querySelector('.hidden').src = images[i]
+    }
+  }, 4500)
 }
+else {
+  main.style.transition = 'opacity 0.5s ease';
+
+  setInterval(() => {
+    // Step 1: Fade out
+    main.style.opacity = '0';
+  
+    // Step 2: After fade-out completes, change background and fade in
+    setTimeout(() => {
+      main.style.backgroundImage = `url(${images[i]})`;
+      main.style.opacity = '1';
+  
+      // Step 3: Preload next image
+      let nextIndex = (i + 1) % images.length;
+      document.querySelector('.hidden').src = images[nextIndex];
+  
+      i = nextIndex;
+    }, 500); // match the CSS transition duration
+  }, 4500);
+}
+
+
 
 const contactForm = document.getElementById('contactForm');
 
